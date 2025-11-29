@@ -1,0 +1,12 @@
+
+
+el esquema de archivos es el siguiente:
+
+proyecto con la pseudo sintaxis:
+
+proyecto:
+index.html (estructura de la web)
+assets (recursos y son files)
+       assets/css (archivos donde van los .css)
+       assets/js  (archivo donde van los .js)
+       assets/img (archivo donde va los .jpg .png .jpeg etc.)
