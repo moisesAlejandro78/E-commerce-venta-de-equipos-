@@ -2,4 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}/* para mi titulo */
+main,header {
+    background-image: url(../img/FondosLogos/FondoBlur.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
