@@ -3,7 +3,18 @@
     align-items: center;
     justify-content: center;
 }/* para mi titulo */
-main,header {
+#Bienvenida{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
     background-image: url(../img/FondosLogos/FondoBlur.png);
     background-repeat: no-repeat;
     background-position: center;
