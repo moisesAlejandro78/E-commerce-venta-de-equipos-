@@ -13,17 +13,13 @@
     align-items: center;
     justify-content: center;
 }
-header{
-    background-image: url(../img/rejas.JPG);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-}
-main {
+body {
     background-image: url(../img/FondosLogos/FondoBlur.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+}
+article{
+    color: white;
 }
