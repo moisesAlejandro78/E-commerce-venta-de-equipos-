@@ -13,20 +13,36 @@
     align-items: center;
     justify-content: center;
 }
-body {
-    background-image: url(../img/FondosLogos/FondoBlur.png);
+main {
+    background-image: url(../img/FondosLogos/FondoPantalla.JPG);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
-article{
+body{
+    background-color: black;
+}
+article {
     color: white;
     background: transparent;
     backdrop-filter: blur(10px);
     border: 1px solid white;
     width: 300px;
-    height: 390px;
+    min-height: 390px;
     border-radius: 8px;
+    margin: 1cm;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    padding: 15px;
+    box-sizing: border-box;
 }
+article figcaption{
+    text-align: center;
+    margin-top: 5px;
+}
+
+
 
