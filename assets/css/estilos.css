@@ -38,6 +38,10 @@ article {
     justify-content: flex-start;
     padding: 15px;
     box-sizing: border-box;
+    transition: transform 0.3s ease;/* animacion para mi article */
+}
+article:hover{
+    transform: scale(1.05);/* animacion al pasar mi mouse sobre mis article */
 }
 article figcaption{
     text-align: center;
