@@ -47,6 +47,10 @@ article figcaption{
     text-align: center;
     margin-top: 5px;
 }
+article button{
+    width: 150px;
+    
+}
 nav {
     position: relative;
     width: 524px;
