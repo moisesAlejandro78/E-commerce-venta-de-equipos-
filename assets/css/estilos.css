@@ -47,6 +47,30 @@ article figcaption{
     text-align: center;
     margin-top: 5px;
 }
+nav {
+    position: relative;
+    width: 524px;
+    height: 50px;
+    background: #222;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav a{
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;/* con esto quito ese subrayado de los <a> */
+    padding: 0 23px;
+    transition: 0.3s;
+}
+nav a:hover{
+    color: orange;/* al pasar por los <a> cambia de color a orange*/
+}
 
 
 
