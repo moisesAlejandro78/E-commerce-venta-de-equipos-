@@ -54,6 +54,7 @@ article button{
     width: 150px;
     border-radius: 50px;
     background: orange;
+    color: black;
 }
 nav {
     position: relative;
