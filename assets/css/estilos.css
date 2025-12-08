@@ -1,3 +1,6 @@
+*{
+    color: white;
+}
 #LogoTitulo{
     display: flex;
     align-items: center;
