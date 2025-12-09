@@ -15,6 +15,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    /* position: fixed; *//* para que mi barra baje cuando haga scroll hacia abajo o arriba. */
+}
+#ltbn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
 }
 main {
     background-image: url(../img/FondosLogos/FondoPantalla.JPG);
@@ -22,6 +36,7 @@ main {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    margin-top: 160px;
 }
 body{
     background-color: black;
@@ -37,7 +52,7 @@ article {
     margin: 1cm;
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
     justify-content: flex-start;
     padding: 15px;
     box-sizing: border-box;
@@ -46,10 +61,6 @@ article {
 article:hover{
     transform: scale(1.05);/* animacion al pasar mi mouse sobre mis article */
 }
-article figcaption{
-    text-align: center;
-    margin-top: 5px;
-}
 article button{
     width: 150px;
     border-radius: 50px;
@@ -57,15 +68,14 @@ article button{
     color: black;
 }
 nav {
-    position: relative;
-    width: 524px;
-    height: 50px;
+    width: fit-content;
     background: #222;
     border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    padding: 10px 30px;
+    margin-top: 10px;
 }
 nav a{
     position: relative;
