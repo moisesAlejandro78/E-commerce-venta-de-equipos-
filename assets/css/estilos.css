@@ -6,11 +6,6 @@
     align-items: center;
     justify-content: center;
 }/* para mi titulo */
-#Bienvenida{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 #Nav{
     display: flex;
     align-items: center;
