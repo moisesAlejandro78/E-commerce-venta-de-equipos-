@@ -1,18 +1,17 @@
-*{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
 }
-#LogoTitulo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}/* para mi titulo */
-#Nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* position: fixed; *//* para que mi barra baje cuando haga scroll hacia abajo o arriba. */
-}
-#ltbn {
+
+header#ltbn {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,70 +19,189 @@
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(10px);
     z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 10px 0;
+    text-align: center;
 }
+
+#LogoTitulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#LogoTitulo img {
+    width: 50px;
+    height: 50px;
+}
+
+#titulo {
+    font-size: 1.4rem;
+}
+
+#Nav nav {
+    margin-top: 8px;
+    background: #222;
+    border-radius: 50px;
+    padding: 8px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 5px 12px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: orange;
+}
+
 main {
     background-image: url(../img/FondosLogos/FondoPantalla.JPG);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center top;
     background-attachment: fixed;
     background-size: cover;
-    margin-top: 160px;/* me ayuda a tener mas espacio, debo averiguar estoy experimentando, pero no esta claro */
+    padding: 120px 15px 50px; /* espacio para el header fijo */
+    min-height: 100vh;
 }
-body{
-    background-color: black;
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
+
 article {
-    color: white;
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border: 1px solid white;
-    width: 300px;
-    min-height: 390px;
-    border-radius: 8px;
-    margin: 1cm;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 340px;
+    min-height: 420px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 15px;
-    box-sizing: border-box;
-    transition: transform 0.3s ease;/* animacion para mi article */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-article:hover{
-    transform: scale(1.05);/* animacion al pasar mi mouse sobre mis article */
+
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 165, 0, 0.3);
 }
-article button{
-    width: 150px;
-    border-radius: 50px;
+
+article img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+article h2 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.3;
+}
+
+article p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: orange;
+    margin: 10px 0;
+}
+
+article button {
+    margin-top: auto;
+    width: 180px;
+    padding: 12px;
     background: orange;
     color: black;
-}
-nav {
-    width: fit-content;
-    background: #222;
+    border: none;
     border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 30px;
-    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-nav a{
-    position: relative;
-    display: inline-block;
-    font-size: 1em;
-    font-weight: 500;
-    color: #fff;
-    text-decoration: none;/* con esto quito ese subrayado de los <a> */
-    padding: 0 23px;
-    transition: 0.3s;
+
+article button:hover {
+    background: #ff8c00;
+    transform: scale(1.05);
 }
-nav a:hover{
-    color: orange;/* al pasar por los <a> cambia de color a orange*/
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+    #titulo {
+        font-size: 1.8rem;
+    }
+
+    #LogoTitulo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+        padding: 8px 20px;
+    }
+
+    article {
+        max-width: 380px;
+    }
+
+    article h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 900px) {
+    header#ltbn {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 40px;
+    }
+
+    #LogoTitulo, #Nav {
+        margin: 0;
+    }
+
+    #Nav nav {
+        margin-top: 0;
+        padding: 12px 35px;
+    }
+
+    main {
+        padding-top: 140px;
+    }
+}
+
+@media (min-width: 1200px) {
+    article {
+        max-width: 360px;
+    }
+
+    article h2 {
+        font-size: 1.35rem;
+    }
 }
 
 
