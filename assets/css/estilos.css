@@ -3,6 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Inter:wght@500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    background-color: #000;
+    color: white;
+}
+
+#titulo, article h2, article p {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Título principal */
+#titulo {
+    font-size: 2.4rem;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #ffffff, #ff8c00, #ffffff);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 20px rgba(255, 140, 0, 0.4);
+}
+
+/* Precios */
+article p {
+    font-size: 1.65rem;
+    background: linear-gradient(90deg, #ff8c00, #ffb74d, #ff8c00);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 body {
     background-color: black;
