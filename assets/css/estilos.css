@@ -14,6 +14,30 @@ body {
     color: white;
 }
 
+#carruselTitulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto;
+    max-width: 420px;                /* un poco más ancho que el carrusel */
+    gap: 20px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+#carruselTitulo h2{
+    font-size: 1.8rem;
+    background: white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
 #titulo,article h2,article p {
     font-family: 'Clash Display', sans-serif;
     font-weight: 700;
@@ -30,21 +54,35 @@ body {
     -webkit-text-fill-color: transparent;
     text-shadow: 0 4px 20px rgba(255, 140, 0, 0.4);
 }
-.proximamente p{
+
+.proximamente p {
     color: #d4d4d4;
     background-color: transparent;
 }
+
 /* CENTRA PERFECTAMENTE LOS VIDEOS EN MÓVIL Y ESCRITORIO */
-#proximamente1, #proximamente2 {
+#proximamente1,
+#proximamente2 {
     display: flex;
-    flex-direction: column;     /* en móvil uno debajo del otro */
-    align-items: center;        /* centra todo horizontalmente */
+    flex-direction: column;           /* móvil: uno debajo del otro */
+    align-items: center;
     text-align: center;
     margin: 60px auto;
     max-width: 400px;
     gap: 20px;
+
+    /* EFECTO VIDRIO ESMERILADO EN MÓVIL TAMBIÉN */
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);     /* importante para Safari/iOS */
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
-#proximamente1 video, #proximamente2 video {
+
+#proximamente1 video,
+#proximamente2 video {
     width: 100%;
     max-width: 380px;
     height: auto;
@@ -52,15 +90,19 @@ body {
     border: 2px solid rgba(255, 140, 0, 0.3);
     box-shadow: 0 10px 30px rgba(255, 140, 0, 0.25);
 }
+
 .carrusel {
-    height: 400px;/* alto de mi movile first */
     width: 90%;
-    max-width: 350px;
+    max-width: 380px;        /* era 350px → ahora igual que los videos */
     aspect-ratio: 1 / 1;
-    margin: 50px auto;
-    overflow: hidden;
-    border-radius: 16px;
-    background: #000;
+    margin: 60px auto;       /* un poco más de separación como los proximamente */
+    padding: 20px;           
+    background: rgba(255, 255, 255, 0.05);   
+    backdrop-filter: blur(12px);             
+    -webkit-backdrop-filter: blur(12px);     
+    border: 1px solid rgba(255, 140, 0, 0.3); 
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
 }
 
 .carrusel-track {
@@ -72,9 +114,10 @@ body {
 .carrusel-track img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* móvil no recorta */
     flex-shrink: 0;
 }
+
 
 @keyframes deslizar {
 
@@ -259,7 +302,7 @@ footer {
     font-size: 0.9rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) {/* tablet */
     #titulo {
         font-size: 1.8rem;
     }
@@ -283,21 +326,25 @@ footer {
     }
 
     .carrusel {
-        max-width: 450px;
+        max-width: 500px;
+        aspect-ratio: 4 / 3; /* un poco más horizontal */
     }
+
     .carrusel-track img {
-        object-fit: cover; /* en pantallas más grandes rellena bien */
+        object-fit: contain; /* ya no se ven barras */
     }
+
     #proximamente1,
     #proximamente2 {
-        flex-direction: row;          /* lado a lado */
+        flex-direction: row;
+        /* lado a lado */
         justify-content: center;
         align-items: flex-start;
         text-align: left;
         max-width: 1100px;
         gap: 50px;
         padding: 30px;
-        backdrop-filter:blur(10px) ;
+        backdrop-filter: blur(10px);
         background: rgba(255, 255, 255, 0.05);
         border-radius: 20px;
         border: 1px solid rgba(255, 140, 0, 0.2);
@@ -305,14 +352,17 @@ footer {
 
     #proximamente1 video,
     #proximamente2 video {
-        width: 500px;                 /* tamaño fijo en escritorio */
+        width: 500px;
+        /* tamaño fijo en escritorio */
         height: 340px;
-        object-fit: cover;            /* para que el video se recorte bonito */
+        object-fit: cover;
+        /* para que el video se recorte bonito */
         flex-shrink: 0;
     }
 
     .proximamente {
-        flex: 1;                      /* el texto ocupa el espacio restante */
+        flex: 1;
+        /* el texto ocupa el espacio restante */
         max-width: 500px;
     }
 
@@ -329,7 +379,7 @@ footer {
     }
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {/* escritorio */
     header#ltbn {
         flex-direction: row;
         justify-content: space-between;
@@ -349,13 +399,16 @@ footer {
     main {
         padding-top: 140px;
     }
-    .carrusel {
-        max-width: 550px;
-        height: 600px;
+    #carruselTitulo{
+        max-width: 760px;
+    }
+
+   .carrusel {
+        max-width: 700px;
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {/* monitor grande */
     article {
         max-width: 360px;
         max-height: 312px;
@@ -364,8 +417,12 @@ footer {
     article h2 {
         font-size: 1.35rem;
     }
-    .carrusel {
-    max-width: 650px;
-    height: 600px;
-  }
+
+    #carruselTitulo{
+        max-width: 960px;
+    }
+
+   .carrusel {
+        max-width: 900px;
+    }
 }
