@@ -84,6 +84,44 @@
         </div>
         <div id="carrito-items"></div>
         <div id="carrito-total">Total: <strong>0,00 bs.</strong></div>
+        <button id="btn-ir-pagar">Ir a pagar 🧾</button>
+    </div>
+    <div id="modal-pago" class="modal-pago oculto">
+        <div class="modal-pago-contenido">
+            <h2>Finalizar Compra</h2>
+
+            <label>Nombre:</label>
+            <input type="text" id="pago-nombre" placeholder="Tu nombre">
+
+            <label>Apellido:</label>
+            <input type="text" id="pago-apellido" placeholder="Tu apellido">
+
+            <label>Dirección:</label>
+            <input type="text" id="pago-direccion" placeholder="Ej: Av. Siempre Viva 123">
+
+            <hr>
+
+            <h3>Método de pago</h3>
+            <div class="opciones">
+                <label><input type="radio" name="metodo" value="qr" checked> QR</label>
+                <label><input type="radio" name="metodo" value="efectivo"> Efectivo</label>
+            </div>
+
+            <div id="qr-contenedor">
+                <img src="carrusel/qrLogo/QR.jpg" alt="Código QR" class="qr-img">
+            </div>
+
+            <hr>
+
+            <h3>Entrega</h3>
+            <div class="opciones">
+                <label><input type="radio" name="entrega" value="tienda" checked> En tienda</label>
+                <label><input type="radio" name="entrega" value="delivery"> Delivery</label>
+            </div>
+
+            <button id="btn-confirmar-pago" class="btn-confirmar">Confirmar Pedido</button>
+            <button id="btn-cerrar-pago" class="btn-cerrar">Cerrar</button>
+        </div>
     </div>
     <footer>
         <p>Pie de pagina</p>
