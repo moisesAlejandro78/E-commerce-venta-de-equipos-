@@ -14,9 +14,7 @@ body {
     color: white;
 }
 
-#titulo,
-article h2,
-article p {
+#titulo,article h2,article p {
     font-family: 'Clash Display', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -32,13 +30,33 @@ article p {
     -webkit-text-fill-color: transparent;
     text-shadow: 0 4px 20px rgba(255, 140, 0, 0.4);
 }
-
-/* BASE (mobile first) */
+.proximamente p{
+    color: #d4d4d4;
+    background-color: transparent;
+}
+/* CENTRA PERFECTAMENTE LOS VIDEOS EN MÓVIL Y ESCRITORIO */
+#proximamente1, #proximamente2 {
+    display: flex;
+    flex-direction: column;     /* en móvil uno debajo del otro */
+    align-items: center;        /* centra todo horizontalmente */
+    text-align: center;
+    margin: 60px auto;
+    max-width: 400px;
+    gap: 20px;
+}
+#proximamente1 video, #proximamente2 video {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 140, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 140, 0, 0.25);
+}
 .carrusel {
+    height: 400px;/* alto de mi movile first */
     width: 90%;
     max-width: 350px;
     aspect-ratio: 1 / 1;
-    /* cuadrado perfecto */
     margin: 50px auto;
     overflow: hidden;
     border-radius: 16px;
@@ -54,7 +72,7 @@ article p {
 .carrusel-track img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     flex-shrink: 0;
 }
 
@@ -267,9 +285,51 @@ footer {
     .carrusel {
         max-width: 450px;
     }
+    .carrusel-track img {
+        object-fit: cover; /* en pantallas más grandes rellena bien */
+    }
+    #proximamente1,
+    #proximamente2 {
+        flex-direction: row;          /* lado a lado */
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 1100px;
+        gap: 50px;
+        padding: 30px;
+        backdrop-filter:blur(10px) ;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 140, 0, 0.2);
+    }
+
+    #proximamente1 video,
+    #proximamente2 video {
+        width: 500px;                 /* tamaño fijo en escritorio */
+        height: 340px;
+        object-fit: cover;            /* para que el video se recorte bonito */
+        flex-shrink: 0;
+    }
+
+    .proximamente {
+        flex: 1;                      /* el texto ocupa el espacio restante */
+        max-width: 500px;
+    }
+
+    .proximamente h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        color: #ff9d1e;
+    }
+
+    .proximamente p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 10px;
+    }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 900px){
     header#ltbn {
         flex-direction: row;
         justify-content: space-between;
@@ -291,12 +351,14 @@ footer {
     }
     .carrusel {
         max-width: 550px;
+        height: 600px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     article {
         max-width: 360px;
+        max-height: 312px;
     }
 
     article h2 {
@@ -304,5 +366,6 @@ footer {
     }
     .carrusel {
     max-width: 650px;
+    height: 600px;
   }
 }
