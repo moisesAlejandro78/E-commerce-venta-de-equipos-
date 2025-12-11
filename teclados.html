@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Moises Alejandro Choque Choque">
     <link rel="stylesheet" href="assets/css/estilos.css">
     <link rel="icon" href="assets\img\image.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet"><!-- estilos de google api -->
-    <meta name="description" content="Esta es una pagina donde encontraras accesorios de computadoras,
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Inter:wght@500;600;700&display=swap"
+        rel="stylesheet"><!-- estilos de google api -->
+    <meta name="description"
+        content="Esta es una pagina donde encontraras accesorios de computadoras,
     laptops, mouse, teclado, gabinetes, monitores, sillas gemer, procesadores, placas base, tarjetas de videos, altavoces y mas.">
     <title>OriginLabStore</title>
 </head>
+
 <body>
     <header id="ltbn">
         <div id="LogoTitulo">
@@ -23,53 +28,67 @@
             <nav>
                 <a href="principal.html">Inicio</a>
                 <a href="index.html">Laptops</a>
-                <a href="teclados.html">Teclados</a><!-- descrubri que si uso el <p> da un salto de linea en la pagina -->
+                <a
+                    href="teclados.html">Teclados</a><!-- descrubri que si uso el <p> da un salto de linea en la pagina -->
                 <a href="mouse.html">Mouse</a><!-- solo usare puro <a> -->
                 <!-- aqui agregare otros mas por ahora trabajare con teclados y mouse -->
             </nav><!-- usare mi nava para negar entre mis paginas webs -->
         </div>
     </header>
     <main>
+        <!-- PRODUCTO 1 -->
         <article>
             <figure>
-                <img src="assets\img\teclado 1.png" width="200" alt="Teclado gemer">
+                <img src="assets/img/teclado 1.png" width="200" alt="Teclado gemer">
             </figure>
             <h2>Teclado Gaming Negro RGB, Inalambrico Recargable</h2>
-            <!-- <p>Caracteristicas del equipo</p>
-            <p>Teclado Inalambrico</p>
-            <p>Teclado en Español con RGB</p>
-            <p>Teclado Recargable</p> -->
-            <p>Precio: 400,00 bs. </p>
-            <button>Agregar al Carrito</button>
+            <p class="precio-visible">Precio: 400,00 bs.</p>
+
+            <button class="btn-carrito" data-nombre="Teclado Gaming Negro RGB Inalámbrico Recargable" data-precio="400">
+                Agregar al Carrito
+            </button>
         </article>
+
+        <!-- PRODUCTO 2 -->
         <article>
             <figure>
-                <img src="assets\img\teclado combo.png" width="200" alt="Teclado con combo">
+                <img src="assets/img/teclado combo.png" width="200" alt="Teclado con combo">
             </figure>
             <h2>Teclado Gaming Negro Combo Mouse con RGB con cable</h2>
-            <!-- <p>Caracteristicas del equipo</p>
-            <p>Teclado Inalambrico con combo de Mouse</p>
-            <p>Teclado en Ingles con RGB</p>
-            <p>Teclado con Pilas</p> -->
-            <p>Precio: 345,00 bs.</p>
-            <button >Agregar al Carrito</button>
+            <p class="precio-visible">Precio: 345,00 bs.</p>
+
+            <button class="btn-carrito" data-nombre="Combo Teclado + Mouse RGB con Cable" data-precio="345">
+                Agregar al Carrito
+            </button>
         </article>
+
+        <!-- PRODUCTO 3 -->
         <article>
             <figure>
-                <img src="assets\img\teclado 3.png" width="200" alt="Teclado Gemer blanco">
+                <img src="assets/img/teclado 3.png" width="200" alt="Teclado Gemer blanco">
             </figure>
             <h2>Teclado Gaming Blanco con cable</h2>
-            <!-- <p>Caracteristicas del equipo</p>
-            <p>Teclado Inalambrico color blanco</p>
-            <p>Teclado en Español con RGB</p>
-            <p>Teclado Recargable</p> -->
-            <p>Precio: 250,00 bs. </p>
-            <button >Agregar al Carrito</button>
+            <p class="precio-visible">Precio: 250,00 bs.</p>
+
+            <button class="btn-carrito" data-nombre="Teclado Gaming Blanco con Cable" data-precio="250">
+                Agregar al Carrito
+            </button>
         </article>
     </main>
+
+    <!-- CARRITO FLOTANTE (pon esto en TODAS tus páginas, justo antes de </body>) -->
+    <div id="carrito-flotante">
+        <div id="carrito-header">
+            <h3>Carrito (<span id="contador-items">0</span>)</h3>
+            <button id="vaciar-carrito">Vaciar</button>
+        </div>
+        <div id="carrito-items"></div>
+        <div id="carrito-total">Total: <strong>0,00 bs.</strong></div>
+    </div>
     <footer>
         <p>Pie de pagina</p>
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

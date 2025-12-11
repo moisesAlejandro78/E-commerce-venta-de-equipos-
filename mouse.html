@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Moises Alejandro Choque Choque">
     <link rel="stylesheet" href="assets/css/estilos.css">
     <link rel="icon" href="assets\img\image.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet"><!-- estilos de google api -->
-    <meta name="description" content="Esta es una pagina donde encontraras accesorios de computadoras,
+    <link
+        href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600;700&family=Inter:wght@500;600;700&display=swap"
+        rel="stylesheet"><!-- estilos de google api -->
+    <meta name="description"
+        content="Esta es una pagina donde encontraras accesorios de computadoras,
     laptops, mouse, teclado, gabinetes, monitores, sillas gemer, procesadores, placas base, tarjetas de videos, altavoces y mas.">
     <title>OriginLabStore</title>
 </head>
+
 <body>
     <header id="ltbn">
         <div id="LogoTitulo">
@@ -23,54 +28,66 @@
             <nav>
                 <a href="principal.html">Inicio</a>
                 <a href="index.html">Laptops</a>
-                <a href="teclados.html">Teclados</a><!-- descrubri que si uso el <p> da un salto de linea en la pagina -->
+                <a
+                    href="teclados.html">Teclados</a><!-- descrubri que si uso el <p> da un salto de linea en la pagina -->
                 <a href="mouse.html">Mouse</a><!-- solo usare puro <a> -->
                 <!-- aqui agregare otros mas por ahora trabajare con teclados y mouse -->
             </nav><!-- usare mi nava para negar entre mis paginas webs -->
         </div>
     </header>
     <main>
+        <!-- MOUSE 1 -->
         <article>
             <figure>
-                <img src="assets\img\mouse gemer 1.png" width="200" alt="mouse gemer">
+                <img src="assets/img/mouse gemer 1.png" width="200" alt="Mouse Gamer Logitech">
             </figure>
             <h2>Mouse Gemer Logitech con cable, 8122 dpi</h2>
-            <!-- <p>Caracteristicas del equipo</p>
-            <p>8200 dpi</p>
-            <p>12 Botones con 6 siendo configurables</p>
-            <p>Mouse Inalambrico con cable</p> -->
-            <p>Precio: 900,50 bs.</p>
-            <button>Agregar al Carrito</button>
+            <p class="precio-visible">Precio: 900,50 bs.</p>
+
+            <button class="btn-carrito" data-nombre="Mouse Logitech Gamer 8122 DPI" data-precio="900.50">
+                Agregar al Carrito
+            </button>
         </article>
+
+        <!-- MOUSE 2 -->
         <article>
             <figure>
-                <img src="assets\img\mouse ergo.png" width="200" alt="Asus Tuf Gaming">
+                <img src="assets/img/mouse ergo.png" width="200" alt="Mouse Ergonómico Inalámbrico">
             </figure>
-            <h2>Mouse Ergonomico Inalambrico</h2>
-            <!-- <p>Caracteristicas del equipo</p>
-            <p>1600 dpi</p>
-            <p>3 Botones estandar</p>
-            <p>Mouse Inalambrico con Recargable</p> -->
-            <p>Precio: 450,00 bs.</p>
-            <button>Agregar al Carrito</button>
+            <h2>Mouse Ergonómico Inalámbrico</h2>
+            <p class="precio-visible">Precio: 450,00 bs.</p>
+
+            <button class="btn-carrito" data-nombre="Mouse Ergonómico Inalámbrico" data-precio="450">
+                Agregar al Carrito
+            </button>
         </article>
+
+        <!-- MOUSE 3 -->
         <article>
             <figure>
-                <img src="assets\img\mouse 2.png" width="200" alt="Hp Envy x360">
-                
+                <img src="assets/img/mouse 2.png" width="200" alt="Mouse Gamer 9233 DPI">
             </figure>
-            <h2>Mouse Gemer Ergonomico Inalambrico con 9233 dpi</h2>
-            <!-- <p>Caracteristicas del equipo</p>
-            <p>5000 dpi</p>
-            <p>3 botones estandar con 1 boton extra configurable</p>
-            <p>Mouse Inalambrico con cable</p> -->
-            <P>Precio: 550,00 bs.</P>
-            <button>Agregar al Carrito</button>
+            <h2>Mouse Gemer Ergonómico Inalámbrico con 9233 dpi</h2>
+            <p class="precio-visible">Precio: 550,00 bs.</p>
+
+            <button class="btn-carrito" data-nombre="Mouse Gamer Inalámbrico 9233 DPI" data-precio="550">
+                Agregar al Carrito
+            </button>
         </article>
     </main>
+    <!-- CARRITO FLOTANTE (pon esto en TODAS tus páginas, justo antes de cerrar </body>) -->
+    <div id="carrito-flotante">
+        <div id="carrito-header">
+            <h3>Carrito (<span id="contador-items">0</span>)</h3>
+            <button id="vaciar-carrito">Vaciar</button>
+        </div>
+        <div id="carrito-items"></div>
+        <div id="carrito-total">Total: <strong>0,00 bs.</strong></div>
+    </div>
     <footer>
         <p>Pie de pagina</p>
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
