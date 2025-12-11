@@ -109,10 +109,13 @@ const qrContenedor = document.getElementById("qr-contenedor");
 
 // Abrir modal
 btnIrPagar.addEventListener("click", () => {
-    if (itemsEnCarrito.length === 0) {
-        alert("Tu carrito está vacío.");
-        return;
-    }
+const hayItems = document.querySelectorAll("#carrito-items .item-carrito").length;
+
+if (hayItems === 0) {
+    alert("Tu carrito está vacío.");
+    return;
+}
+
     modalPago.classList.remove("oculto");
 });
 
