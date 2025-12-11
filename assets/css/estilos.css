@@ -409,6 +409,92 @@ footer {
     background: #ff2222 !important;
     transform: scale(1.05);
 }
+/* === MODAL DE PAGO === */
+.modal-pago {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.modal-pago.oculto {
+    display: none;
+}
+
+.modal-pago-contenido {
+    background: rgba(40, 40, 40, 0.95);
+    border: 1px solid orange;
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+.modal-pago-contenido input {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+.opciones {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.qr-img {
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.btn-confirmar {
+    width: 100%;
+    background: orange;
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cerrar {
+    width: 100%;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#btn-ir-pagar {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    background: #ffa726;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 
 @media (min-width: 600px) {/* tablet */
     #titulo {

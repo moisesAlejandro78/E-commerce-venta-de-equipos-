@@ -101,3 +101,53 @@ document.addEventListener("DOMContentLoaded", function () {
     // Inicializar
     actualizarCarrito();
 });
+// === MODAL DE PAGO ===
+const modalPago = document.getElementById("modal-pago");
+const btnIrPagar = document.getElementById("btn-ir-pagar");
+const btnCerrarPago = document.getElementById("btn-cerrar-pago");
+const qrContenedor = document.getElementById("qr-contenedor");
+
+// Abrir modal
+btnIrPagar.addEventListener("click", () => {
+    if (itemsEnCarrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
+    }
+    modalPago.classList.remove("oculto");
+});
+
+// Cerrar modal
+btnCerrarPago.addEventListener("click", () => {
+    modalPago.classList.add("oculto");
+});
+
+// Mostrar u ocultar QR según pago elegido
+document.querySelectorAll("input[name='metodo']").forEach(radio => {
+    radio.addEventListener("change", () => {
+        qrContenedor.style.display = (radio.value === "qr") ? "block" : "none";
+    });
+});
+
+// Confirmar pedido
+document.getElementById("btn-confirmar-pago").addEventListener("click", () => {
+    const nombre = document.getElementById("pago-nombre").value.trim();
+    const apellido = document.getElementById("pago-apellido").value.trim();
+    const direccion = document.getElementById("pago-direccion").value.trim();
+    const metodo = document.querySelector("input[name='metodo']:checked").value;
+    const entrega = document.querySelector("input[name='entrega']:checked").value;
+
+    if (!nombre || !apellido || !direccion) {
+        alert("Completa todos los campos.");
+        return;
+    }
+
+    alert(
+        "Pedido Confirmado:\n\n" +
+        "Cliente: " + nombre + " " + apellido + "\n" +
+        "Dirección: " + direccion + "\n" +
+        "Método de pago: " + metodo + "\n" +
+        "Entrega: " + entrega
+    );
+
+    modalPago.classList.add("oculto");
+});
